@@ -300,6 +300,9 @@ EmailMessageService
 </tr>
 <tr>
 <td width="168">
+ <p> 
+ Single Responsibility Principle (SRP)
+</p> 
 <p>&nbsp;</p>
 </td>
 <td width="246">
@@ -311,6 +314,9 @@ EmailMessageService
 </tr>
 <tr>
 <td width="168">
+ <p> 
+ Single Responsibility Principle (SRP)
+</p> 
 <p>&nbsp;</p>
 </td>
 <td width="246">
@@ -322,6 +328,9 @@ EmailMessageService
 </tr>
 <tr>
 <td width="168">
+ <p> 
+ Single Responsibility Principle (SRP)
+</p> 
 <p>&nbsp;</p>
 </td>
 <td width="246">
@@ -333,6 +342,9 @@ EmailMessageService
 </tr>
 <tr>
 <td width="168">
+ <p> 
+ Single Responsibility Principle (SRP)
+</p> 
 <p>&nbsp;</p>
 </td>
 <td width="246">
