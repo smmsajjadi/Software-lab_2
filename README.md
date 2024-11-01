@@ -306,6 +306,7 @@ EmailMessageService
 <p>&nbsp;</p>
 </td>
 <td width="246">
+ کلاس‌های EmailMessageService، SmsMessageService و TelegramMessageService وظایف متعددی دارند: ارسال پیام و اعتبارسنجی آدرس/شماره تلفن.
 <p>&nbsp;</p>
 </td>
 <td width="284">
