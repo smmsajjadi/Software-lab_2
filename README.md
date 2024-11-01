@@ -315,7 +315,7 @@ EmailMessageService
 <tr>
 <td width="168">
  <p> 
- Single Responsibility Principle (SRP)
+Open-Close Principle (OCP)
 </p> 
 <p>&nbsp;</p>
 </td>
@@ -329,7 +329,7 @@ EmailMessageService
 <tr>
 <td width="168">
  <p> 
- Single Responsibility Principle (SRP)
+Liskov Substitution Principle
 </p> 
 <p>&nbsp;</p>
 </td>
@@ -343,8 +343,21 @@ EmailMessageService
 <tr>
 <td width="168">
  <p> 
- Single Responsibility Principle (SRP)
-</p> 
+Interface Segregation Principle</p> 
+<p>&nbsp;</p>
+</td>
+<td width="246">
+<p>&nbsp;</p>
+</td>
+<td width="284">
+<p>&nbsp;</p>
+</td>
+</tr>
+ <tr>
+<td width="168">
+ <p> 
+Dependency Inversion Principle
+ </p> 
 <p>&nbsp;</p>
 </td>
 <td width="246">
