@@ -310,6 +310,7 @@ EmailMessageService
 <p>&nbsp;</p>
 </td>
 <td width="284">
+ منطق validation را به کلاس ها یا روش های اختصاصی خارج از کلاس های سرویس پیام جدا کنیم.
 <p>&nbsp;</p>
 </td>
 </tr>
@@ -321,9 +322,11 @@ Open-Close Principle (OCP)
 <p>&nbsp;</p>
 </td>
 <td width="246">
+ رابط MessageService برای تغییر بسته نیست. هر بار که یک نوع پیام جدید اضافه می شود، رابط و پیاده سازی آن باید تغییر کنند.
 <p>&nbsp;</p>
 </td>
 <td width="284">
+ از طراحی انعطاف پذیرتری مانند استفاده از الگوی استراتژی یا رابط های جداگانه برای هر نوع سرویس پیام استفاده کنید.
 <p>&nbsp;</p>
 </td>
 </tr>
@@ -335,9 +338,11 @@ Liskov Substitution Principle
 <p>&nbsp;</p>
 </td>
 <td width="246">
+ رابط MessageService همه پیاده‌سازی‌ها را مجبور می‌کند تا روش‌هایی را برای همه انواع پیام‌هایی که از آن‌ها استفاده نمی‌کنند تعریف کنند (به عنوان مثال sendSmsMessage در EmailMessageService).
 <p>&nbsp;</p>
 </td>
 <td width="284">
+ 
 <p>&nbsp;</p>
 </td>
 </tr>
@@ -348,9 +353,11 @@ Interface Segregation Principle</p>
 <p>&nbsp;</p>
 </td>
 <td width="246">
+ کلاس Main مستقیماً پیاده سازی های سرویس پیام خاص را نشان می دهد که باعث جفت شدن زیاد می شود.
 <p>&nbsp;</p>
 </td>
 <td width="284">
+ رابط MessageService را برای هر نوع پیام به رابط های کوچکتر و خاص تر تقسیم کنید.
 <p>&nbsp;</p>
 </td>
 </tr>
@@ -365,6 +372,7 @@ Dependency Inversion Principle
 <p>&nbsp;</p>
 </td>
 <td width="284">
+ از تزریق وابستگی برای انتقال پیاده سازی سرویس پیام مناسب به کلاس Main استفاده کنید.
 <p>&nbsp;</p>
 </td>
 </tr>
