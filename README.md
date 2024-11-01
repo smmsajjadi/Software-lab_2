@@ -338,7 +338,6 @@ Liskov Substitution Principle
 <p>&nbsp;</p>
 </td>
 <td width="246">
- رابط MessageService همه پیاده‌سازی‌ها را مجبور می‌کند تا روش‌هایی را برای همه انواع پیام‌هایی که از آن‌ها استفاده نمی‌کنند تعریف کنند (به عنوان مثال sendSmsMessage در EmailMessageService).
 <p>&nbsp;</p>
 </td>
 <td width="284">
@@ -353,7 +352,7 @@ Interface Segregation Principle</p>
 <p>&nbsp;</p>
 </td>
 <td width="246">
- کلاس Main مستقیماً پیاده سازی های سرویس پیام خاص را نشان می دهد که باعث جفت شدن زیاد می شود.
+ رابط MessageService همه پیاده‌سازی‌ها را مجبور می‌کند تا روش‌هایی را برای همه انواع پیام‌هایی که از آن‌ها استفاده نمی‌کنند تعریف کنند (به عنوان مثال sendSmsMessage در EmailMessageService).
 <p>&nbsp;</p>
 </td>
 <td width="284">
@@ -369,6 +368,8 @@ Dependency Inversion Principle
 <p>&nbsp;</p>
 </td>
 <td width="246">
+  کلاس Main مستقیماً پیاده سازی های سرویس پیام خاص را نشان می دهد که باعث جفت شدن زیاد می شود.
+
 <p>&nbsp;</p>
 </td>
 <td width="284">
