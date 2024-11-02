@@ -1,37 +1,25 @@
-public class SmsMessageService implements MessageService {
+public class SmsMessageService implements MessageService<SmsMessage> {
     @Override
-    public void sendSmsMessage(SmsMessage smsMessage) {
-        if(validatePhoneNumber(smsMessage.getSourcePhoneNumber()) && validatePhoneNumber(smsMessage.getTargetPhoneNumber())){
-            System.out.println("Sending a SMS from " + smsMessage.getSourcePhoneNumber() + " to " + smsMessage.getTargetPhoneNumber() + " with content : " + smsMessage.getContent());
-        }else{
-            throw new IllegalArgumentException("Phone Number is Not Correct!");
+    public void sendMessage(SmsMessage smsMessage) {
+        if (validatePhoneNumber(smsMessage.getSourcePhoneNumber()) &&
+            validatePhoneNumber(smsMessage.getTargetPhoneNumber())) {
+            System.out.println("Sending a SMS from " + smsMessage.getSourcePhoneNumber() +
+                               " to " + smsMessage.getTargetPhoneNumber() +
+                               " with content: " + smsMessage.getContent());
+        } else {
+            throw new IllegalArgumentException("Phone Number is not correct!");
         }
-    }
-
-    @Override
-    public void sendEmailMessage(EmailMessage emailMessage) {
-        //Empty Body!
-    }
-
-    @Override
-    public void sendTelegramMessage(TelegramMessage telegramMessage) {
-        //Empty Body!
     }
 
     private boolean validatePhoneNumber(String phoneNumber) {
-        // Check if the phone number is exactly 11 characters long
         if (phoneNumber.length() != 11) {
-            return false; // Phone number length is not valid
+            return false;
         }
-
-        // Check if the phone number contains only numeric digits
         for (char digit : phoneNumber.toCharArray()) {
             if (!Character.isDigit(digit)) {
-                return false; // Phone number contains non-numeric characters
+                return false;
             }
         }
-
-        // If all checks pass, return true (valid phone number)
         return true;
     }
 }
