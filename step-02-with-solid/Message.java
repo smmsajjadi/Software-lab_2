@@ -1,4 +1,4 @@
-public class Message {
+public abstract class Message {
     String content;
 
     public String getContent() {
@@ -8,5 +8,4 @@ public class Message {
     public void setContent(String content) {
         this.content = content;
     }
-
 }
