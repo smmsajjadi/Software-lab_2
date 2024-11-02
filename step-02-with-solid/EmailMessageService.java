@@ -1,21 +1,25 @@
-import java.util.regex.Pattern;
-
-public class EmailMessageService implements MessageService<EmailMessage> {
+public class SmsMessageService implements MessageService<SmsMessage> {
     @Override
-    public void sendMessage(EmailMessage emailMessage) {
-        if (validateEmailAddress(emailMessage.getSourceEmailAddress()) &&
-            validateEmailAddress(emailMessage.getTargetEmailAddress())) {
-            System.out.println("Sending an email from " + emailMessage.getSourceEmailAddress() + 
-                               " to " + emailMessage.getTargetEmailAddress() +
-                               " with content: " + emailMessage.getContent());
+    public void sendMessage(SmsMessage smsMessage) {
+        if (validatePhoneNumber(smsMessage.getSourcePhoneNumber()) &&
+            validatePhoneNumber(smsMessage.getTargetPhoneNumber())) {
+            System.out.println("Sending a SMS from " + smsMessage.getSourcePhoneNumber() +
+                               " to " + smsMessage.getTargetPhoneNumber() +
+                               " with content: " + smsMessage.getContent());
         } else {
-            throw new IllegalArgumentException("Email Address is not correct!");
+            throw new IllegalArgumentException("Phone Number is not correct!");
         }
     }
 
-    private boolean validateEmailAddress(String email) {
-        String emailRegex = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$";
-        Pattern pattern = Pattern.compile(emailRegex);
-        return pattern.matcher(email).matches();
+    private boolean validatePhoneNumber(String phoneNumber) {
+        if (phoneNumber.length() != 11) {
+            return false;
+        }
+        for (char digit : phoneNumber.toCharArray()) {
+            if (!Character.isDigit(digit)) {
+                return false;
+            }
+        }
+        return true;
     }
 }
